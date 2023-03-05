@@ -1,0 +1,51 @@
+{
+  "name": "esc-command",
+  "version": "0.0.0",
+  "description": "escape command to prevent command injection vulnerabilities",
+  "keywords": [
+    "escape",
+    "command",
+    "injection"
+  ],
+  "homepage": "https://github.com/commenthol/esc-command#readme",
+  "bugs": {
+    "url": "https://github.com/commenthol/esc-command/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/esc-command.git"
+  },
+  "license": "MIT",
+  "author": "commenthol <commenthol@gmail.com>",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./types",
+  "files": [
+    "src",
+    "types"
+  ],
+  "scripts": {
+    "all": "npm-run-all clean lint coverage types",
+    "clean": "rimraf lib coverage types",
+    "coverage": "c8 -r lcov -r text npm test",
+    "lint": "eslint --ext .js .",
+    "test": "mocha",
+    "types": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6",
+    "c8": "^7.13.0",
+    "eslint": "^8.35.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.3.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
